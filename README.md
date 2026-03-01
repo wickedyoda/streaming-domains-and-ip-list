@@ -55,6 +55,24 @@ aliases, DNS-based split tunneling, firewall sets, and proxy rules.
   files.
 - IP-only matching is useful, but domain-based rules are usually more stable.
 
+## Validation Safeties
+
+This repo includes automated checks for list formatting and data hygiene:
+
+- Valid domain/CIDR/ASN entry types by file
+- Duplicate entry detection
+- CRLF/trailing-whitespace detection
+
+Run locally:
+
+```bash
+make validate
+```
+
+CI:
+
+- GitHub Actions runs the same validator on every push and pull request.
+
 ## Disclaimer
 
 These lists are curated references, not authoritative vendor feeds. Use at your
